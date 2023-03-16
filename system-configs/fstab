@@ -1,0 +1,3 @@
+# This file contains the template for mounting multiboot workspace drives
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+UUID=<UUID> /workspace ntfs-3g exec,permissions,auto 0 0
