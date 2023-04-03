@@ -1,2 +1,1 @@
-curl -sSL https://install.python-poetry.org | POETRY_HOME=/opt/environments/poetry python3 -
-
+sudo apt install python3-poetry
