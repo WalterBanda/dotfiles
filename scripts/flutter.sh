@@ -5,13 +5,20 @@ sudo apt-get install build-essential git wget curl libfuse2 libfuse3-3 clang cma
 curl https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.7.3-stable.tar.xz --output ../downloads/flutter-sdk.tar.xz
 # git clone https://github.com/flutter/flutter.git -b stable --depth=1 /opt/environments/flutter
 
-tar xf ../downloads/flutter-sdk.tar.xz -C /opt/environments/
+tar xf ../downloads/flutter-sdk.tar.xz -C /opt/environments/flutter/global
 
 sudo chmod +x ../profile.d/flutter.sh
 
 sudo cp ../profile.d/flutter.sh /etc/profile.d/
 
 source /etc/profile.d/flutter.sh
+
+# Add support of sdk versioning via fvm
+mkdir /opt/environments/flutter/fvm
+
+ln -s /opt/environments/flutter/fvm ~/fvm
+
+flutter pub global activate fvm
 
 if [[-x "$flutter"]]
 then	
