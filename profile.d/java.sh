@@ -1,1 +1,1 @@
-export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+# export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
